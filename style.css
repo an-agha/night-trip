@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600&family=Mukta:wght@300;400;500;600;800&family=Nunito:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600&family=Rancho&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat,sans-serif;
+}
+header{
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/ganapathy-kumar-GLmhbqbn1WA-unsplash\ 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* top */
+.header-top{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5px;
+}
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.search div{
+    width: 55%;
+    height: 5vh;
+   display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 20px;
+}
+.search-icon{
+    width: 5px;
+    aspect-ratio: 1;
+    color: #fff;
+}
+.search-input{
+    width: 95%;
+    height: 5vh;
+    border-radius: 20px;
+    display: none;
+    margin-left: 5vw;
+    background-color: transparent;
+    border: none;
+    background-color: rgba(255,255,255,.3);
+    padding:0 2vw
+}
+.searchhClass{
+    display: flex;
+}
+.search button{
+    width: 25%;
+    height: 4vh;
+    border-radius: 15px;
+    background-color:  #00C9E0;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* header body */
+.header-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+h1{
+    color: #fff;
+}
+.header-body h1{
+    font-size: 35pt;
+    margin-top: 2vh;
+}
+.header-sub-cont{
+    width: 90%;
+    color: #fff;
+    font-size: 11pt;
+    font-weight: 600;
+    margin-top: 2vh;
+}
+.header-content{
+    width: 90%;
+    color: #fff;
+    font-size: 10pt; 
+    margin-top: 2vh;
+    line-height: 1.6;
+}
+
+/* header icon */
+.header-icon{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+}
+.icon-container{
+    display: flex;
+    flex-direction: column;
+}
+.icon-container img{
+    margin-top: 1.5vh;
+}
+.bg{
+    width: 100%;
+    height: 12vh;
+    
+    background: linear-gradient(180deg, rgba(1, 22, 39, 0) 0%, #011627 76.64%, rgba(1, 22, 39, .2) 100%);
+}
+/* pick-trip-cont */
+.pick-trip-cont{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    margin-top: -1vh;
+    /* background-image: linear-gradient(to bottom right,rgba(1, 22, 39, 1)30%,rgba(1, 22, 39, .8), #35f1d8, #011627) ; */
+    background: linear-gradient(160.69deg, #011627 20.81%, rgba(0, 31, 56, 0.79) 40.96%, rgba(13, 59, 114, 0.461677) 64.34%, rgba(0, 135, 117, 0.47) 80.92%, rgba(0, 0, 0, 0.65) 102.52%);
+}
+.pick-trip-head{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.pick-trip-head h1{
+    width: 90%;
+    font-size: 20pt;
+    margin-bottom: 2vh;
+}
+.pick-trip-head span{
+    color: #fff;
+}
