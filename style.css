@@ -183,7 +183,7 @@ h1{
 .image-bg-cont{
     width: 40vw;
     height: 40vh;
-    background-image: url("./image/Dots.png");
+    background-image: url("image/Dots.png");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
