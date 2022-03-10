@@ -16,12 +16,18 @@ header{
     background-repeat: no-repeat;
     background-position: center;
 }
+.black-bg{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 7, 12, 0.6);
+}
 /* top */
 .header-top{
     width: 100%;
     height: 10vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding: 0 5px;
 }
@@ -125,7 +131,6 @@ h1{
     flex-direction: column;
     align-items: center;
     margin-top: -1vh;
-    /* background-image: linear-gradient(to bottom right,rgba(1, 22, 39, 1)30%,rgba(1, 22, 39, .8), #35f1d8, #011627) ; */
     background: linear-gradient(180deg,#011627  0%,#005981  44.8%,#004865 61.78%,#011627  100% ,#011627 100%);
 }
 .pick-trip-head{
@@ -148,7 +153,7 @@ h1{
     align-items: center;
     margin: 3vh 0;
 }
-.pick-trip-item span{
+.trip-item{
     width: 50%;
     height: 6vh;
     display: flex;
@@ -157,6 +162,11 @@ h1{
     color: #fff;
     margin-bottom: 1px;
     border-bottom: 1px solid #fff;
+}
+.trip-item:hover{
+    color: #00C9E0;
+    border-bottom: 3px solid #00C9E0;
+    font-weight: 600;
 }
 .pick-trip-content{
     width: 90%;
@@ -190,53 +200,49 @@ h1{
     height: 37vh;
     display: flex;
     justify-content: space-around;
-    /* background-color: #011627; */
 }
 .img div{
     width: 25%;
     height: 100%;
     background-size: cover;
-    animation: slider 10s linear 5s infinite ;
+    background-position: center;
+    animation: slider 10s linear  running infinite ;
 }
 .img div:nth-child(1){
-    background-image: url('/Image\ \(72\).png');
+    background-image: url('https://media.istockphoto.com/photos/cheers-picture-id1000892548?k=20&m=1000892548&s=612x612&w=0&h=K12znVVCxxz1I99fhEQYvfP29hIvWtLyIW5TqdNvKfU=');
   
 }
 .img div:nth-child(2){
-    background-image: url('/Image\ \(72\).png');
+    background-image: url('https://media.istockphoto.com/photos/young-adult-woman-relaxing-on-a-swing-in-a-tropical-paradise-picture-id1161389082?k=20&m=1161389082&s=612x612&w=0&h=db5JIF8CwxvzVF3vqOVJtHC5_6ZMmFaekd2RIz3bMLk=');
 }
 .img div:nth-child(3){
-    background-image: url('/Image\ \(72\).png');
+    background-image: url('https://media.istockphoto.com/photos/walking-in-the-sunglow-hikers-picture-id841131914?k=20&m=841131914&s=612x612&w=0&h=DkgXo5D-GqbhApZqJiVeJnHNVAtwBr23XgkiEsHA0i4=');
 }
 .img div:nth-child(4){
-    background-image: url('/Image\ \(72\).png');
+    background-image: url('https://media.istockphoto.com/photos/sunset-beach-party-in-goa-india-picture-id1278725201?k=20&m=1278725201&s=612x612&w=0&h=OCE8IJEXdwrTmERGa-PmzLj7hvBPgPqbtWnCYVDThrk=');
 }
 @keyframes slider {
+
     0%{
-        margin-left: 0%;
+        margin-left: 0;
     }
     25%{
         margin-left: -25%;
     }
-    30%{
-        margin-left: -25%;
-    }
-    55%{
+    50%{
         margin-left: -50%;
     }
-    60%{
-        margin-left: -50%;
-    }
-    80%{
-        margin-left: -75%;
-    }
-    85%{
+    75%{
         margin-left: -75%;
     }
     100%{
         margin-left: -100%;
-    }  
+    }
 }
+
+/* .img div:hover{
+    animation-play-state: paused;
+} */
 
 .pick-content-cont span,.about-cont span{
     color: #fff;
@@ -340,10 +346,8 @@ h1{
 }
 .res-span{
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     font-size: 12pt;
+    text-align: center;
     font-weight: 600;
     color: #fff;
     margin: 2vh 0;
@@ -362,17 +366,17 @@ hr{
     justify-content: space-between;
     
 }
-.response div{
+.response-parent{
     width: 100%;
-    height: 30vh;
+    height: 35vh;
     background-color: #02223B;
     margin-bottom: 4vh;
     display: flex;
     
 }
 .tag{
-    width: 15% !important; 
-    height: 30px !important;
+    width: 15%; 
+    height: 30px;
     background-image: url('/“.png');
     background-repeat: no-repeat;
     margin: 2vw;
@@ -384,16 +388,21 @@ hr{
     flex-direction: column;
     justify-content: center;
 }
-.res-content span{
+.res-cont-child{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.res-cont-child span , .rew-cont{
     color: #fff;
     font-size: 8pt;
     line-height: 1.6;
 }
-.res-content div{
+.user-details{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 2vh;
+    margin-top: 1vh;
 }
 .res-content div img{
     width: 50px;
@@ -435,4 +444,236 @@ footer div span{
 footer div div{
     display: flex;
     flex-direction: row;
+}
+
+@media screen and (min-width:740px) {
+    header{
+        height: 100vh;
+    }
+    .header-top{
+        height: 18vh;
+    }
+    .search button{
+        width: 15%;
+        height: 9vh;
+        border-radius: 36px;
+    }
+    .search-input{
+        height: 10vh;
+        width: 60%;
+        margin-left: 4vw;
+    }
+    .search div{
+        width: 70%;
+    }
+    .header-sub-cont{
+        width: 47%;
+    }
+    .header-content{
+        width: 70%;
+        text-align: center;
+    }
+    .pick-trip-head{
+        flex-direction: row;
+        padding-top: 5vh;
+    }
+    .pick-trip-head h1{
+        width: 32%;
+    }
+    .pick-trip-head span{
+        width: 58%;
+        font-size: 12pt;
+    }
+    .pick-trip-item {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .trip-item{
+        width: 20%;
+    }
+    .pick-trip-content{
+        margin-top: 15vh;
+    }
+    .pick-content-cont{
+        width: 50%;
+        margin-top: none;
+    }
+    .image-bg-cont{
+        width: 20vw;
+        height: 75vh;
+    }
+    .img-cont{
+        width: 30vw;
+    }
+    .img{
+        height: 65vh;
+    }
+    .pick-content-cont button , .about-cont button{
+        width: 25vw;
+        height: 10vh;
+        background-repeat: 40px;
+    }
+    .about-us{
+        flex-direction: row;
+    }
+    .about-cont{
+        width: 40%;
+    }
+    .picture-main-cont{
+        width: 60%;
+    }
+    .about-pic-container{
+        width: 75%;
+    }
+    .picture{
+        height: 57vh;
+    }
+    .card {
+        width: 19vw;
+        height: 8vh;
+        top: 44vh;
+    }
+    .response{
+        width: 90%;
+    }
+    .response-parent{
+        width: 48%;
+        height: 70vh;
+    }
+    .res-span{
+        margin: 7vh 0;
+    }
+    .tag{
+        margin: 1vw;
+    }
+    .res-content{
+        
+        padding:1vh 1vw;
+    }
+    .user-details{
+        margin-top: 2vh;
+    }
+    footer div{
+        width: 25%;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .header-top{
+        height: 9vh;
+    }
+    .search button{
+        width: 12%;
+        height: 5vh;
+    }
+    .search div{
+        width: 80%;
+    }
+    .search-input{
+        width: 48%;
+        height: 5vh;
+        margin-left: 2vw;
+    }
+    .header-body{
+        margin-top: 10vh;
+    }
+    .header-body h1{
+        font-size: 80pt;
+    }
+    .header-sub-cont{
+        width: 30%;
+        margin-top: 8vh;
+        font-size: 15pt;
+    }
+    .header-content {
+        width: 50%;
+        line-height: 2;
+        font-size: 12pt;
+        margin-top: 6vh;
+        
+    }
+    .bg{
+        height: 20vh;
+    }
+    .header-icon{
+        margin-top: 6vh;
+    }
+    .pick-trip-head{
+        width: 80%;
+    }
+    .pick-trip-head h1 {
+        width: 38%;
+        font-size: 45pt;
+    }
+    .about-cont h1, .pick-content-cont h1{
+        font-size: 45pt;
+    }
+    .pick-trip-head span{
+        width: 35%;
+        display: flex;
+        align-items: center;
+    }
+    .pick-trip-item {
+        width: 80%;
+    }
+    .trip-item{
+        font-size: 15pt;
+    }
+    .trip-item:hover{
+        border-bottom: 4px solid #00C9E0;
+    }
+    .pick-trip-content {
+        width: 80%;
+        margin-top: 10vh;
+    }
+    .pick-content-cont button, .about-cont button{
+        width: 15vw;
+        height: 5vh;
+    }
+    .pick-content-cont span, .about-cont span {
+        font-size: 12pt;
+        line-height: 2;
+    }
+    .about-us{
+        width: 80%;
+        margin-top: 5vh;
+    }
+    .picture{
+        height: 32vh;
+    }
+    .card{
+        width: 13vw;
+        height: 5vh;
+        top: 24vh;
+    }
+    .response{
+        justify-content: space-around;
+    }
+    .response-container {
+        width: 80%;
+    }
+    .response-parent {
+        width: 42%;
+        height: 40vh;
+        margin-bottom: 10vh;
+    }
+    .tag{
+        width: 9%;
+    }
+    .res-cont-child span, .rew-cont {
+        font-size: 11pt;
+    }
+    .rew-cont{
+        width: 80%;
+    }
+    .res-content div img {
+        width: 60px;
+        height: 60px;
+    }
+    footer{
+        justify-content: space-evenly;
+    }
+    footer div{
+        width: 10%;
+    }
 }
