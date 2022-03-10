@@ -11,7 +11,7 @@ header{
     height: 65vh;
     display: flex;
     flex-direction: column;
-    background-image: url("/ganapathy-kumar-GLmhbqbn1WA-unsplash\ 1.png");
+    background-image: url("ganapathy-kumar-GLmhbqbn1WA-unsplash\ 1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -183,7 +183,7 @@ h1{
 .image-bg-cont{
     width: 40vw;
     height: 40vh;
-    background-image: url('/Dots.png');
+    background-image: url('Dots.png');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
@@ -282,7 +282,7 @@ h1{
 }
 .dots{
     width: 8%;
-    background-image: url('/dots-2.png');
+    background-image: url('dots-2.png');
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
