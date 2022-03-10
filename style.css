@@ -183,7 +183,7 @@ h1{
 .image-bg-cont{
     width: 40vw;
     height: 40vh;
-    background-image: url("image/Dots.png");
+    background-image:  url("./image/Dots.png");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
@@ -282,7 +282,7 @@ h1{
 }
 .dots{
     width: 8%;
-    background-image: url("./image/dots-2.png");
+    background-image:  url("./image/dots-2.png");
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
@@ -377,7 +377,7 @@ hr{
 .tag{
     width: 15%; 
     height: 30px;
-    background-image: url("./image/“.png");
+    background-image:  url("./image/“.png");
     background-repeat: no-repeat;
     margin: 2vw;
 }
